@@ -20,3 +20,4 @@ vlans:
 
   - name: IDK
     id: 102
+    stp_priority: 4096
