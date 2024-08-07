@@ -2,6 +2,7 @@ vlans:
 
   - name: Wheres
     id: 100
+    stp_priority: 0
     l3: True
     ip_address: 10.0.100.2/24
     hsrp: True
@@ -13,6 +14,7 @@ vlans:
 
   - name: Wally
     id: 101
+    stp_priority: 0
     l3: True
     ip_address: 10.0.101.2/24
     vrrp: True
