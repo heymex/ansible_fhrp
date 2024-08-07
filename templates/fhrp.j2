@@ -3,6 +3,9 @@ vlan {{ vlan.id }}
   name {{ vlan.name }}
   exit
 spanning-tree vlan {{ vlan.id }} priority {{ vlan.stp_priority }}
+{% if vlan.vrf is defined %}
+interface vlan{{ vlan.id }}
+  ip vrf forwarding {{ vlan.vrf }}
 {% if vlan.l3 is defined %}
 interface vlan{{ vlan.id }}
   ip address {{ vlan.ip_address | ansible.utils.ipaddr('address') }} {{ vlan.ip_address | ansible.utils.ipaddr('netmask') }}

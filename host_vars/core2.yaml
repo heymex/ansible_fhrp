@@ -1,23 +1,25 @@
 vlans:
 
-  - name: Wheres
+  - name: DEV-VLAN-100
+    vrf: DEV
     id: 100
     stp_priority: 4096
     l3: True
-    ip_address: 10.0.100.3/24
-    hsrp: True
+    ip_address: 10.0.100.253/24
+    vrrp: True
     standby_ip: 10.0.100.1
     priority: 99
 
-  - name: Wally
+  - name: DEV-VLAN-101
+    vrf: DEV
     id: 101
     stp_priority: 4096
     l3: True
-    ip_address: 10.0.101.3/24
+    ip_address: 10.0.101.253/24
     vrrp: True
     standby_ip: 10.0.101.1
     priority: 99
 
-  - name: IDK
+  - name: DEV-VLAN-102-L2
     id: 102
     stp_priority: 4096
