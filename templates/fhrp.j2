@@ -19,6 +19,7 @@ interface vlan{{ vlan.id }}
 {% else %}
 {% endif %}
 {% endif %}
+{% endif %}
 {% if vlan.vrrp is defined %}
   vrrp {{ vlan.id }} ip {{ vlan.standby_ip }}
   vrrp {{ vlan.id }} priority {{ vlan.priority }}
