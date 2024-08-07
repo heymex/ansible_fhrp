@@ -1,0 +1,20 @@
+vlans:
+
+  - name: Wheres
+    id: 100
+    l3: True
+    ip_address: 10.0.100.3/24
+    hsrp: True
+    standby_ip: 10.0.100.1
+    priority: 99
+
+  - name: Wally
+    id: 101
+    l3: True
+    ip_address: 10.0.101.3/24
+    vrrp: True
+    standby_ip: 10.0.101.1
+    priority: 99
+
+  - name: IDK
+    id: 102
